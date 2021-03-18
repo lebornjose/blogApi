@@ -23,7 +23,7 @@ DBhelper.prototype.connectHelper = function(sql,callback) {
 
 //@param col(string) default is "*"
 //@param where(string) as same as SQL and the default is null
-DBhelper.prototype.selectWhere = function(callback,where,col){
+DBhelper.prototype.selectWhere = (callback,where,col) => {
   switch(arguments.length){
     case 1:
       this.connectHelper("SELECT * FROM "+this.table,function (err, results, fields) {

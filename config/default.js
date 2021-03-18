@@ -6,7 +6,9 @@ const config = {
         user: 'root',
         password: 'huangxing',
         database:'blog'
-    }
+    },
+    pageSize: 20,
+    page: 0,
 };
 
 module.exports = config;
