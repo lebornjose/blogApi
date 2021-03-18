@@ -1,11 +1,11 @@
 const config = {
     port: 3000,
     database: {
-        DATABASE: 'blog',
-        USERNAME: 'root',
-        PASSWORD: 'huangxing',
-        PORT: '3306',
-        HOST: '127.0.0.1'
+        host: '127.0.0.1',
+        port: '3306',
+        user: 'root',
+        password: 'huangxing',
+        database:'blog'
     }
 };
 

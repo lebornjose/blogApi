@@ -1,6 +1,5 @@
 const router = require('koa-router')();
-const mysql = require('mysql');
-const config = require('../config/default');
+const dbHelper = require('../utils/dbHelper');
 
 router.prefix('/article');
 
@@ -8,22 +7,17 @@ router.get('/', function (ctx, next) {
     ctx.body = 'this is a users response!'
 });
 
-router.get('/list', (ctx, next) => {
-    const pool = mysql.createConnection({
-        host: '127.0.0.1',
-        port: '3306',
-        user: 'root',
-        password: 'huangxing',
-        database:'blog'
-    });
-    pool.query('SELECT * FROM `article`', (err, data, fields) => {
-        // if (err) return;
-        console.log('1221121212')
-        console.log(err);
-        console.log(data);
-        ctx.body = '32323';
-    });
-    pool.end();
+router.get('/list', async (ctx, next) => {
+    const dbtest = new dbHelper.DBhelper("article");
+    const query = () => {
+        return new Promise((resolve, reject) => {
+            dbtest.selectWhere(function(result) {//select操作
+                resolve(result);
+            });
+        })
+    };
+    const result = await query();
+    ctx.body = result;
 });
 
 module.exports = router;
