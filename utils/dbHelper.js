@@ -1,12 +1,11 @@
-const fs = require('fs');
 const mysql = require('mysql');
 const config = require('../config/default');
 
 const config_file = config.database;
 function DBhelper (table) {
-    //default s
-    this.table = table;
-    this.config = config_file;
+  //default s
+  this.table = table;
+  this.config = config_file;
 };
 
 DBhelper.prototype.connectHelper = function(sql,callback) {
@@ -23,13 +22,14 @@ DBhelper.prototype.connectHelper = function(sql,callback) {
 
 //@param col(string) default is "*"
 //@param where(string) as same as SQL and the default is null
-DBhelper.prototype.selectWhere = (callback,where,col) => {
+DBhelper.prototype.selectWhere = function (callback) {
   switch(arguments.length){
     case 1:
-      this.connectHelper("SELECT * FROM "+this.table,function (err, results, fields) {
+      this.connectHelper(`SELECT * FROM ${this.table} limit 0,20`,function (err, results, fields) {
         if(!err){
           callback(results);}
         else
+          callback(err)
           console.log(err);
       });
       break;
@@ -103,5 +103,3 @@ DBhelper.prototype.delete = function(where,callback) {
 };
 
 module.exports.DBhelper = DBhelper;
-
-
