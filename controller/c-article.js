@@ -1,6 +1,5 @@
 // 文章列表页面
 const userModel = require('../lib/mysql.js');
-
 /**
  * 首页分页， 每次输出10条
  */

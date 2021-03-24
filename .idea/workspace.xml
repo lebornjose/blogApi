@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="206adeff-92b0-4aed-90ea-7c454f166660" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/controller/c-article.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/mysql.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/default.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/default.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/article.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/article.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/c-article.js" beforeDir="false" afterPath="$PROJECT_DIR$/controller/c-article.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/mysql.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/mysql.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -28,20 +25,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/controller/c-article.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="256">
-              <caret line="8" column="23" lean-forward="true" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="23" />
+            <state relative-caret-position="448">
+              <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/mysql.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="322">
-              <caret line="19" column="22" lean-forward="true" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
+            <state relative-caret-position="709">
+              <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
             </state>
           </provider>
         </entry>
@@ -147,8 +144,8 @@
         <option value="$PROJECT_DIR$/utils/dbHelper.js" />
         <option value="$PROJECT_DIR$/config/default.js" />
         <option value="$PROJECT_DIR$/routes/article.js" />
-        <option value="$PROJECT_DIR$/controller/c-article.js" />
         <option value="$PROJECT_DIR$/lib/mysql.js" />
+        <option value="$PROJECT_DIR$/controller/c-article.js" />
       </list>
     </option>
   </component>
@@ -233,12 +230,12 @@
       <updated>1615898442461</updated>
       <workItem from="1615898443755" duration="5544000" />
       <workItem from="1615993495940" duration="1468000" />
-      <workItem from="1616068111098" duration="5656000" />
+      <workItem from="1616068111098" duration="6131000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12668000" />
+    <option name="totallyTimeSpent" value="13143000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
@@ -258,7 +255,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.2755102" />
+      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.2755102" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -357,17 +354,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/controller/c-article.js">
+    <entry file="file://$PROJECT_DIR$/lib/mysql.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="8" column="23" lean-forward="true" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="23" />
+        <state relative-caret-position="709">
+          <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/mysql.js">
+    <entry file="file://$PROJECT_DIR$/controller/c-article.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="19" column="22" lean-forward="true" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
+        <state relative-caret-position="448">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
         </state>
       </provider>
     </entry>
