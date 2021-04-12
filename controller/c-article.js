@@ -5,10 +5,17 @@ const userModel = require('../lib/mysql.js');
  */
 exports.postPostsPage = async ctx => {
   let page = ctx.params.page || 1;
+  let total = 0
+  await userModel.totalArticle()
+    .then(result => {
+      console.log('1222');
+      console.log(result)
+    })
   await userModel.findPostByPage(page)
     .then(result => {
       ctx.body = result
-    }).catch(() => {
+    }).catch((err) => {
+      console.log(err)
       ctx.body = 'error'
     })
 };
