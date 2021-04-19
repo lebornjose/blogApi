@@ -8,12 +8,15 @@ exports.postPostsPage = async ctx => {
   let total = 0
   await userModel.totalArticle()
     .then(result => {
-      console.log('1222');
-      console.log(result)
+      total = result[0].count
     })
   await userModel.findPostByPage(page)
     .then(result => {
-      ctx.body = result
+      ctx.body = {
+        code: 0,
+        data: result,
+        total: total
+      }
     }).catch((err) => {
       console.log(err)
       ctx.body = 'error'
