@@ -9,7 +9,7 @@ exports.postPostsPage = async ctx => {
   await userModel.totalArticle()
     .then(result => {
       total = result[0].count
-    })
+    });
   await userModel.findPostByPage(page)
     .then(result => {
       ctx.body = {
