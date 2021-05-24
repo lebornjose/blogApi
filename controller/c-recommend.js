@@ -1,8 +1,7 @@
-// 文章类型分类
-const categoryModel = require('../lib/mysql.js');
+const recommendModel = require('../lib/mysql.js');
 
 exports.postPostsPage = async ctx => {
-  await categoryModel.findCategorys()
+  await recommendModel.findRecomment()
     .then(result => {
       ctx.body = {
         code: 0,

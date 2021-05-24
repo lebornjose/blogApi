@@ -1,7 +1,8 @@
 const router = require('koa-router')();
-const controller = require('../controller/c-category');
+const controller = require('../controller/c-recommend');
 
-router.prefix('/api/category');
+
+router.prefix('/api/recommend');
 
 router.get('/list', controller.postPostsPage);
 
