@@ -11,6 +11,7 @@ const users = require('./routes/users');
 const article = require('./routes/article');
 const category = require('./routes/category');
 const recommend = require('./routes/recommend');
+const login = require('./routes/login');
 
 // error handler
 onerror(app);
@@ -41,6 +42,8 @@ app.use(users.routes(), users.allowedMethods());
 app.use(article.routes(), article.allowedMethods());
 app.use(category.routes(), category.allowedMethods());
 app.use(recommend.routes(), recommend.allowedMethods());
+app.use(login.routes(), login.allowedMethods());
+
 
 // error-handling
 app.on('error', (err, ctx) => {
