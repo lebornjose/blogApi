@@ -1,5 +1,5 @@
 const config = {
-    port: 3000,
+    port: 5000,
     database: {
       host: '127.0.0.1',
       port: '3306',
