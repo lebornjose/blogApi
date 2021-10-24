@@ -15,8 +15,7 @@ exports.postPostsPage = async ctx => {
       }
       const user = {uid: result[0].uid};
       jwt.sign(user,"secretkey",{ expiresIn: '30day' },(err,token) => {
-        console.log('222');
-        console.log(token);
+        ctx.cookies.set('token',token);
       });
       ctx.body = {
         code: 0,
