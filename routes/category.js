@@ -5,4 +5,6 @@ router.prefix('/api/category');
 
 router.get('/list', controller.postPostsPage);
 
+router.get('/num', controller.postNum);
+
 module.exports = router;

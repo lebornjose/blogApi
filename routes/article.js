@@ -5,4 +5,5 @@ router.prefix('/api/article');
 
 router.get('/list/:page', controller.postPostsPage);
 
+
 module.exports = router;
