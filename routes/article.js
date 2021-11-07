@@ -5,5 +5,6 @@ router.prefix('/api/article');
 
 router.get('/list/:page', controller.postPostsPage);
 
+router.get('/detail/:id', controller.getArticle);
 
 module.exports = router;

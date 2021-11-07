@@ -14,7 +14,6 @@ exports.postPostsPage = async ctx => {
       message: '登录过期'
     };
   }
-  // jwt.verify(ctx.cookies.get('token'));
   let page = ctx.params.page || 1;
   let total = 0;
   await userModel.totalArticle()
@@ -32,4 +31,33 @@ exports.postPostsPage = async ctx => {
       console.log(err)
       ctx.body = 'error'
     })
+};
+
+exports.getArticle = async ctx => {
+  const token = ctx.cookies.get('token');
+  const isLogin = await Verify.Verify(token);
+  if(!isLogin) {
+    return ctx.body = {
+      code: -1,
+      message: '登录过期'
+    };
+  }
+  let articleId = ctx.params.id || 1;
+  let obj = await userModel.getArticle(articleId);
+  let detail = await userModel.getArticleDetail(articleId);
+  if(obj.length) {
+    const result = {
+      ...obj[0],
+      content: detail[0].content,
+    };
+    ctx.body = {
+      code: 0,
+      data: result,
+    }
+  } else {
+    ctx.body = {
+      code: -2,
+      message: '未找到文章',
+    }
+  }
 };
