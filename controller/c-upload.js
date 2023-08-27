@@ -2,7 +2,7 @@ const OSS = require('ali-oss');
 const path = require('path');
 let fs = require('fs');
 const multer = require('koa-multer');
-const ossConfig = require('../config/oss.config');
+const ossConfig = require('../config/oss.config.js');
 
 // ossConfig
 // {
